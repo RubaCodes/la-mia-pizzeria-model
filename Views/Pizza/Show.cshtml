@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Pizza
+
+<body>
+    <section class="text-center bg-dark bg-gradient text-white py-5" id="pizza-library">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="card bg-dark bg-gradient text-white border-2 border-white">
+                        @*@pizza.PizzaId  Id asseganto correttamente*@ 
+                        <img class="img-fluid" src="@Model.ImgPath" alt="@Model.Name" />
+                            <h3 class="py-1">@Model.Name</h3>
+                        <span class="py-1">Price : @Model.Price $</span>
+                        <p class="px-2"> Ingredienti: <small>@Model.Description</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
