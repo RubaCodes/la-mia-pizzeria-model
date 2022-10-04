@@ -6,14 +6,13 @@
     <title>@ViewData["Title"] - Pizza Planet</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/la_mia_pizzeria_static.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
+    <header class="bg-dark py-3 border-bottom border-danger">
         <partial name="_HeaderMainLayout"/>
     </header>
     <div >
-        <main role="main" class="py-3">
+        <main role="main" class="py-3 bg-dark">
             @RenderBody()
         </main>
     </div>
