@@ -1,21 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    List<Pizza> menu = new List<Pizza>();
-    Pizza margherita = new Pizza("Margherita","Pomodoro, Mozzarella","/img/pizza-photos/margherita.jpg",8.00m);
-    Pizza diavola = new Pizza("Diavola", "Pomodoro, Mozzarella, Salamino piccante", "/img/pizza-photos/diavola.jpg", 10m);
-    Pizza quattroStagioni = new Pizza("4 Stagioni", "Pomodoro, Mozzarella, Prosciutto Cotto, Funghi, Carciofini, Olive Nere",  "/img/pizza-photos/quattro-stagioni.jpg", 12m);
-    Pizza quattroFormaggi = new Pizza("4 Formaggi", "Pomodoro, Mozzarella, Gorgonzola, Scamorza, Grana", "/img/pizza-photos/quattro-formaggi.jpg", 9m);
-    menu.Add(margherita);
-    menu.Add( diavola);
-    menu.Add(quattroStagioni);
-    menu.Add(quattroFormaggi);
 }
+@model List<Pizza>
 
 <body>
     <section class="text-center bg-dark bg-gradient text-white py-5" id="pizza-library">
         <div class="container">
             <div class="row">
-                @foreach (Pizza pizza  in menu)
+                @foreach (Pizza pizza  in Model)
                 {
                     <div class="col-3">
                         <div class="card bg-dark bg-gradient text-white border-2 border-white">
